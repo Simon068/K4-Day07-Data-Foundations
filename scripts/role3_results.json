@@ -1,0 +1,147 @@
+{
+  "What is Python?": [
+    {
+      "content": "Vector databases store embeddings for similarity search.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_6"
+      },
+      "score": 0.058204174782990795,
+      "doc_id": "chunk_6"
+    },
+    {
+      "content": "Python is a high-level programming language.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_7"
+      },
+      "score": 0.04773559159018412,
+      "doc_id": "chunk_7"
+    },
+    {
+      "content": "Jumping is a physical activity that requires leg strength.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_4"
+      },
+      "score": 0.047413436778318406,
+      "doc_id": "chunk_4"
+    }
+  ],
+  "Where do brown bears live?": [
+    {
+      "content": "A fox is a small omnivorous mammal.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_1"
+      },
+      "score": 0.13998166829347727,
+      "doc_id": "chunk_1"
+    },
+    {
+      "content": "Machine learning uses algorithms to learn from data.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_5"
+      },
+      "score": 0.09128418626645009,
+      "doc_id": "chunk_5"
+    },
+    {
+      "content": "Brown bears live in forests across the northern hemisphere.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_3"
+      },
+      "score": 0.04747903891703991,
+      "doc_id": "chunk_3"
+    }
+  ],
+  "How does vector search work?": [
+    {
+      "content": "Brown bears live in forests across the northern hemisphere.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_3"
+      },
+      "score": 0.2344487036609417,
+      "doc_id": "chunk_3"
+    },
+    {
+      "content": "Dogs are loyal companions and working animals.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_2"
+      },
+      "score": 0.1517888732372902,
+      "doc_id": "chunk_2"
+    },
+    {
+      "content": "Machine learning uses algorithms to learn from data.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_5"
+      },
+      "score": 0.08442587875210784,
+      "doc_id": "chunk_5"
+    }
+  ],
+  "What animals are loyal companions?": [
+    {
+      "content": "Brown bears live in forests across the northern hemisphere.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_3"
+      },
+      "score": 0.112757700782569,
+      "doc_id": "chunk_3"
+    },
+    {
+      "content": "Dogs are loyal companions and working animals.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_2"
+      },
+      "score": 0.0526095506631583,
+      "doc_id": "chunk_2"
+    },
+    {
+      "content": "Vector databases store embeddings for similarity search.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_6"
+      },
+      "score": 0.03837411392763518,
+      "doc_id": "chunk_6"
+    }
+  ],
+  "What is machine learning?": [
+    {
+      "content": "Machine learning uses algorithms to learn from data.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_5"
+      },
+      "score": 0.10497845042472467,
+      "doc_id": "chunk_5"
+    },
+    {
+      "content": "Brown bears live in forests across the northern hemisphere.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_3"
+      },
+      "score": 0.08828105053617245,
+      "doc_id": "chunk_3"
+    },
+    {
+      "content": "Vector databases store embeddings for similarity search.",
+      "metadata": {
+        "source": "role3_benchmark",
+        "doc_id": "chunk_6"
+      },
+      "score": 0.08572341945175069,
+      "doc_id": "chunk_6"
+    }
+  ]
+}
