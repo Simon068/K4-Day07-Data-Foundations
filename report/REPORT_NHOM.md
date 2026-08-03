@@ -1,7 +1,7 @@
 # Báo Cáo Nhóm — Lab 7: Embedding & Vector Store
 
 **Nhóm:** Nhóm 4
-**Thành viên:** Phú Quang + Quân, Trần Kiên, Nguyễn Hữu Huy, Trần Linh
+**Thành viên:** Phú Quang + Quân (Role 1), Trần Kiên (Role 2), Nguyễn Hữu Huy (Role 3), Trần Linh (Role 4)
 **Ngày:** 03/08/2026
 
 > **Nộp 1 bản / nhóm.** Phần cá nhân (hướng tiếp cận, kết quả riêng, dự đoán…) mỗi thành viên nộp riêng trong `REPORT_CANHAN.md`. Chi tiết thang điểm: `docs/SCORING.md`.
@@ -60,7 +60,7 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 
 ### Chiến lược của từng thành viên
 
-**Người 1 — Phú Quang + Quân (Code & baseline)**
+**Người 1 — Phú Quang + Quân (Role 1 — Code & baseline)**
 - **Loại chiến lược:** FixedSizeChunker
 - **Mô tả & lý do chọn cho chủ đề này:** Đây là chiến lược baseline, đơn giản và dễ kiểm soát để làm nền cho việc so sánh.
 - **Code snippet (nếu custom):**
@@ -68,7 +68,7 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 chunker = FixedSizeChunker(chunk_size=500, overlap=50)
 ```
 
-**Người 2 — Trần Kiên (Dữ liệu & metadata)**
+**Người 2 — Trần Kiên (Role 2 — Dữ liệu & metadata)**
 - **Loại chiến lược:** Metadata-assisted retrieval
 - **Mô tả & lý do chọn:** Trọng tâm công việc là chuẩn bị dữ liệu, metadata và đảm bảo tài liệu có đủ thông tin để retrieval hoạt động tốt hơn.
 - **Code snippet (nếu custom):**
@@ -76,7 +76,7 @@ chunker = FixedSizeChunker(chunk_size=500, overlap=50)
 metadata_filter = {"customer_role": "Consumer", "category": "Return Policy"}
 ```
 
-**Người 3 — Nguyễn Hữu Huy (Retrieval strategy & benchmark)**
+**Người 3 — Nguyễn Hữu Huy (Role 3 — Retrieval strategy & benchmark)**
 - **Loại chiến lược:** SentenceChunker
 - **Mô tả & lý do chọn:** Chunk theo câu giúp giữ ý nghĩa câu và phù hợp cho các câu hỏi benchmark ngắn, rõ mục tiêu.
 - **Code snippet (nếu custom):**
@@ -84,7 +84,7 @@ metadata_filter = {"customer_role": "Consumer", "category": "Return Policy"}
 chunker = SentenceChunker(max_sentences_per_chunk=2)
 ```
 
-**Người 4 — Trần Linh (So sánh, báo cáo & demo)**
+**Người 4 — Trần Linh (Role 4 — So sánh, báo cáo & demo)**
 - **Loại chiến lược:** RecursiveChunker
 - **Mô tả & lý do chọn:** Recursive chunking phù hợp vì giữ được ngữ cảnh của đoạn và vẫn chia nhỏ hợp lý cho retrieval.
 - **Code snippet (nếu custom):**
