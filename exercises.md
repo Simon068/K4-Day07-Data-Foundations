@@ -33,20 +33,27 @@ Hoàn thành tất cả các TODOs trong `src/chunking.py`, `src/store.py`, và 
 
 Chạy `pytest tests/` để kiểm tra tiến độ.
 
+### Trạng thái hiện tại của repo
+- [x] Code cốt lõi ở `src/` đã được triển khai và chạy được.
+- [x] Bộ test chuẩn `pytest tests/` đang pass.
+- [x] Pipeline ingest có thể chạy và self-check thành công.
+- [ ] Báo cáo cá nhân cần điền đầy đủ nội dung theo mẫu.
+- [ ] Báo cáo nhóm cần điền đầy đủ nội dung về tài liệu, chiến lược, benchmark và lỗi/lesson learned.
+
 ### Danh sách cần làm (Checklist)
 - [x] `Document` dataclass — ĐÃ TRIỂN KHAI SẴN
 - [x] `FixedSizeChunker` — ĐÃ TRIỂN KHAI SẴN
-- [ ] `SentenceChunker` — tách dựa trên ranh giới câu, nhóm lại thành các chunks
-- [ ] `RecursiveChunker` — thử nghiệm các dấu phân cách (separators) theo thứ tự, thực hiện đệ quy trên các đoạn có kích thước quá lớn
-- [ ] `compute_similarity` — công thức tính độ tương tự cosine kèm cơ chế bảo vệ chia cho 0
-- [ ] `ChunkingStrategyComparator` — gọi cả ba chiến lược, tính toán các chỉ số thống kê
-- [ ] `EmbeddingStore.__init__` — khởi tạo store (lưu trữ trong bộ nhớ hoặc ChromaDB)
-- [ ] `EmbeddingStore.add_documents` — nhúng (embed) và lưu trữ từng tài liệu
-- [ ] `EmbeddingStore.search` — nhúng truy vấn, xếp hạng theo tích vô hướng (dot product)
-- [ ] `EmbeddingStore.get_collection_size` — trả về số lượng
-- [ ] `EmbeddingStore.search_with_filter` — lọc theo siêu dữ liệu (metadata), sau đó tìm kiếm
-- [ ] `EmbeddingStore.delete_document` — xóa tất cả các chunks của một doc_id
-- [ ] `KnowledgeBaseAgent.answer` — truy xuất (retrieve) + tạo prompt + gọi LLM
+- [x] `SentenceChunker` — tách dựa trên ranh giới câu, nhóm lại thành các chunks
+- [x] `RecursiveChunker` — thử nghiệm các dấu phân cách (separators) theo thứ tự, thực hiện đệ quy trên các đoạn có kích thước quá lớn
+- [x] `compute_similarity` — công thức tính độ tương tự cosine kèm cơ chế bảo vệ chia cho 0
+- [x] `ChunkingStrategyComparator` — gọi cả ba chiến lược, tính toán các chỉ số thống kê
+- [x] `EmbeddingStore.__init__` — khởi tạo store (lưu trữ trong bộ nhớ hoặc ChromaDB)
+- [x] `EmbeddingStore.add_documents` — nhúng (embed) và lưu trữ từng tài liệu
+- [x] `EmbeddingStore.search` — nhúng truy vấn, xếp hạng theo tích vô hướng (dot product)
+- [x] `EmbeddingStore.get_collection_size` — trả về số lượng
+- [x] `EmbeddingStore.search_with_filter` — lọc theo siêu dữ liệu (metadata), sau đó tìm kiếm
+- [x] `EmbeddingStore.delete_document` — xóa tất cả các chunks của một doc_id
+- [x] `KnowledgeBaseAgent.answer` — truy xuất (retrieve) + tạo prompt + gọi LLM
 
 > **Nộp code:** thư mục `src/`
 > **Ghi lại hướng tiếp cận vào:** REPORT_CANHAN.md — Phần 2 (Hướng tiếp cận của tôi)
@@ -67,6 +74,8 @@ Chủ đề Giai đoạn 2 **cố định theo lớp K4**: chính sách TMĐT / 
 
 **Bước 2 — Thu thập 5-10 tài liệu.** Chỉ dùng nguồn công khai hoặc nguồn nhóm có quyền sử dụng; lưu dưới dạng `.txt` hoặc `.md` vào thư mục `data/`.
 
+> Mục đích của các file dữ liệu này là tạo một "knowledge base" cho bài lab: bạn dùng chúng để test pipeline ingest, chunking, retrieval và quality comparison. `.md` / `.txt` chứa nội dung tài liệu; `.csv` thường lưu thông tin nguồn và metadata để bạn truy vết và lọc dữ liệu khi đánh giá.
+
 **Quy tắc dữ liệu bắt buộc:**
 - Không đưa dữ liệu cá nhân, thông tin đăng nhập, hồ sơ nội bộ hoặc nội dung có quyền sử dụng không rõ ràng vào repo.
 - Với mỗi tài liệu, ghi `source_url`, `retrieved_at` (ngày lấy) và `document_version` hoặc ngày hiệu lực nếu nguồn có nêu.
@@ -81,11 +90,11 @@ Ghi vào bảng:
 
 | # | Tên tài liệu | Nguồn (Source URL) | Ngày lấy / Phiên bản | Số ký tự | Metadata đã gán |
 |---|--------------|------------|--------------------|----------|-----------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Chính sách đổi trả | https://cdn.contract.alibaba.com/terms/common_platform_service/20260713181356461/20260713181356461.html?spm=a2o4n.tm80089364.9817169850.6.41892887K8GFND&lng=en | 2026-08-03 / 2026.1 | 2629 | source_url, retrieved_at, document_version, license_or_permission |
+| 2 | Chính sách hoàn tiền | https://cdn.contract.alibaba.com/terms/common_platform_service/20260713182056907/20260713182056907.html?spm=a2o4n.tm80089364.9817169850.7.41892887K8GFND&lng=en | 2026-08-03 / 2026.1 | 2667 | source_url, retrieved_at, document_version, license_or_permission |
+| 3 | Điều khoản sử dụng | https://cdn.contract.alibaba.com/terms/common_platform_service/20260713175157767/20260713175157767.html?spm=a2o4n.tm80089364.9817169850.1.41892887K8GFND&lng=en | 2026-08-03 / 2026.1 | 2560 | source_url, retrieved_at, document_version, license_or_permission |
+| 4 | Điều khoản và điều kiện mua bán | https://cdn.contract.alibaba.com/terms/common_platform_service/20260713175615185/20260713175615185.html?spm=a2o4n.tm80089364.9817169850.2.41892887K8GFND&lng=en | 2026-08-03 / 2026.1 | 2869 | source_url, retrieved_at, document_version, license_or_permission |
+| 5 | Điều khoản thanh toán | https://cdn.contract.alibaba.com/terms/common_platform_service/20260713182423790/20260713182423790.html?spm=a2o4n.tm80089364.9817169850.10.41892887K8GFND&lng=en | 2026-08-03 / 2026.1 | 2544 | source_url, retrieved_at, document_version, license_or_permission |
 
 **Bước 3 — Thiết kế cấu trúc metadata (metadata schema):** Mỗi tài liệu cần `source_url`, `retrieved_at`, `document_version` và ít nhất 2 trường hữu ích cho việc truy xuất (ví dụ: `category`, `customer_role`, `language`, `difficulty`).
 
