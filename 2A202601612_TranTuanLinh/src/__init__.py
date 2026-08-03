@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from .agent import KnowledgeBaseAgent
 from .chunking import (
     ChunkingStrategyComparator,
