@@ -10,9 +10,9 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from dotenv import load_dotenv
 
-from Trần_Kiên_G12_T179_1598.ingest import build_knowledge_base
-from Trần_Kiên_G12_T179_1598.src.agent import KnowledgeBaseAgent
-from Trần_Kiên_G12_T179_1598.src.embeddings import (
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.ingest import build_knowledge_base
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.src.agent import KnowledgeBaseAgent
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.src.embeddings import (
     EMBEDDING_PROVIDER_ENV,
     LOCAL_EMBEDDING_MODEL,
     OPENAI_EMBEDDING_MODEL,

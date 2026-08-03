@@ -33,9 +33,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from Trần_Kiên_G12_T179_1598.src.chunking import FixedSizeChunker
-from Trần_Kiên_G12_T179_1598.src.models import Document
-from Trần_Kiên_G12_T179_1598.src.store import EmbeddingStore
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.src.chunking import FixedSizeChunker
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.src.models import Document
+from BAI_TAP_CA_NHAN.Trần_Kiên_G12_T179_1598.src.store import EmbeddingStore
 
 TEXT_EXTENSIONS = {".md", ".txt"}
 
